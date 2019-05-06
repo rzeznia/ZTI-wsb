@@ -1,10 +1,19 @@
 body{
     background-color: #422d1a;
     font-family: 'Roboto', sans-serif;
+    position: relative;
+}
+@media (min-width: 1600px) {
+    .container{
+        max-width: 1600px;
+    }
 }
 .content{
     background-color: rgb(245, 219, 185);
     padding: 20px;
+}
+.container{
+    padding: 0;
 }
 h1, h2, h3, h4, h5{
     font-family: 'Oswald', sans-serif;
@@ -21,17 +30,23 @@ nav{
     margin: 0 auto;
     width: 100%;
     text-align: center;
+    position: sticky;
 }
 .nav-item{
     display: inline;
     margin-right: 50px;
-
+}
+.nav-link{
+    padding: 0;
 }
 .nav-box{
     margin: 0 auto;
 }
-@media (min-width: 1200px) {
-    .container{
-        max-width: 1600px;
-    }
+nav a{
+    color: wheat;
+}
+.nav-pills .nav-link.active{
+    color: #f6e8d6;
+    background-color: inherit;
+    font-weight: bold;
 }
