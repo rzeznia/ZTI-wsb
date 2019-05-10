@@ -50,3 +50,22 @@ nav a{
     background-color: inherit;
     font-weight: bold;
 }
+li{
+    list-style: none;
+    background-image: url("img/coffee.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+    background-size: 40px;
+    margin: 0;
+	padding: 10px 0 10px 60px;
+}
+
+hr {
+    display:block;
+    border:0px;
+    height:10px;
+    background-image:url('img/coffee.png');
+    background-size: 40px;
+    background-repeat: no-repeat;
+    text-align: center;
+}   
