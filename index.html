@@ -1,96 +1,229 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="style.css" type="text/css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <title>XD</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<title>PJESKI</title>
+
+	<script>
+        $(document).ready(function () {
+            $("nav a").click(function (event) {
+            	console.log("gunwo");
+                let padding;
+                $(document).width() < 992 ? padding = 50 : padding = 68;
+                $('html,body').animate({
+                    scrollTop: $(event.target.hash).offset().top - padding
+                }, 'slow');
+                 if (padding === 50 && document.getElementById("navbarSupportedContent").className === "navbar-collapse collapse show") {
+                    document.getElementById("navbar-button").click();
+                }
+            });
+        });
+    </script>
 </head>
-<body data-spy="scroll">
-    <header>
-        <h2>Kawa, Kawa? KAWA!</h2>
-    </header>
-    <nav id="navbar" class="navbar sticky-top">
-        <span class="nav nav-box nav-pills">
-            <div class="nav-item"><a href="#o_kawie" class="nav-link">O KAWIE</a></div>
-            <div class="nav-item"><a href="#rodzaje" class="nav-link">RODZAJE KAWY</a></div>
-            <div class="nav-item"><a href="#o_kawie3" class="nav-link">PRZYGOTOWANIE KAWY</a></div>
-            <div class="nav-item"><a href="#o_kawie4" class="nav-link">O KAWIE 4</a></div>
-        </span>        
-    </nav>
-    <div class="container" data-target="#navbar">
-        <div class="content" id="o_kawie">
-            <h2>O kawie 1</h2>
-            <div class="row">
-                <div class="col-lg-4">
-                    <h4>Szybkie fakty</h4>
-                    <ul>
-                        <li>Największym producentem kawy na świecie jest Brazylia. Pochwalić się może prawie 3 milionami ton produkcji rocznie. Stanowi to 1/3 w skali świata.</li>
-                        <li>Istnieje 100 gatunków kawy.</li>
-                        <li>Rynek kawy warty jest ok. 100 miliardów dolarów. Kawę wyprzedza tylko rynek ropy naftowej.</li>
-                        <li>Kawa jest drugim najważniejszym napojem na Ziemi</li>
-                        <li>Aby przedawkować kofeinę należy wypić około 100 kubków kawy!</li>
-                        <li>Słowo "coffee" pochodzi z arabskiego "qahhwat al-bun", co znaczy "wino z pestek"</li>
-                        <li>Coś tam pewnie jeszcze wymyślę</li>
-                    </ul>
-                </div>
-                <div class="col-lg-8">
-                    <h4>O co tu chodzi?</h4>
-                    <p>
-                        Kawa jest napojem sporządzanym z palonych, a następnie zmielonych lub poddanych instantyzacji ziaren kawowca, zwykle podawana na gorąco. 
-                    </p><hr />
-                    <p>
-                        Pochodzi z Etiopii, w Europie pojawiła się około XVI wieku. Jedna z najpopularniejszych używek na świecie i główne źródło kofeiny.
-                    </p><hr />
-                    <p>
-                        Nazwa kawy pochodzi prawdopodobnie od arabskiego kahwa. Do większości języków europejskich przeniknęła poprzez tureckie słowo kahve i utworzoną od niego włoską nazwę caffè. Drugą prawdopodobną etymologią nazwy kawa jest nazwa etiopskiego miasta Kaffa, dziś – Kefa.
-                    </p><hr />
-                    <p>
-                        W Polsce pojawiła się po bitwie pod Wiedniem w 1683 w formie tureckiej. Wcześniej znana była regionalnie, np. w Kamieńcu Podolskim, gdzie dla wojsk osmańskich otwarto po zajęciu przez nie miasta kawiarnie, polscy mieszkańcy Kamieńca mogli wówczas zapoznać się z kawą i kawiarnią. 
-                    </p><hr />
-                    <p> 
-                        Dokładna etymologia wyrazu nie jest znana. Kahva oznacza po arabsku zarówno kawę, jak i wino, a drugie znaczenie jest starsze. 
-                        Nazwa może wywodzić się od znanego z uprawy kawy regionu Kaffa w Etiopii. Może ona pochodzić także od słowa kohwet oznaczającego siłę.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="content" id="rodzaje">
-            <h2>Rodzaje kawy</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et nisi tortor. Nullam rutrum, eros et ullamcorper suscipit, massa erat fermentum urna, sagittis euismod sem magna ac nulla. Sed eget condimentum massa. Aliquam felis magna, sollicitudin aliquet arcu non, accumsan interdum arcu. Mauris vulputate, arcu nec semper vehicula, mauris odio semper odio, eget eleifend magna mauris a enim. Praesent sodales odio non mollis sollicitudin. Proin eu consectetur ante, finibus tempus magna. Aliquam purus magna, mattis id faucibus ut, rutrum et justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Pellentesque neque neque, volutpat in ante ultricies, tincidunt congue dolor. Donec ultricies, elit nec vestibulum cursus, justo nibh commodo sem, at hendrerit quam neque facilisis metus. Curabitur porta non tellus in tincidunt. Aliquam et lacus convallis, interdum risus eu, bibendum nisi. Nulla condimentum dignissim augue vel tempus. In placerat ante sem, a dapibus tellus iaculis eget. Nulla mollis arcu a nisi cursus semper. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus eu purus a odio consequat eleifend. Nunc sed sodales nunc. Donec lectus enim, mattis sit amet suscipit a, luctus non felis. Integer finibus magna vitae erat consectetur ullamcorper. Duis vel auctor sapien, non tristique nibh. Vestibulum tortor mi, suscipit id mollis et, luctus non elit.
-                Vivamus sollicitudin elementum neque, ultricies lobortis odio pretium sit amet. Vivamus rutrum justo fermentum nulla posuere, non dignissim dui sollicitudin. Sed ipsum nisi, facilisis eu egestas eget, pellentesque et tortor. Fusce sed facilisis sem, eu commodo eros. Ut finibus, libero non porta consectetur, ex mauris sodales dui, in eleifend quam tellus et mauris. Donec in mollis mi. Donec rhoncus sit amet nisi non ullamcorper. Proin nulla ex, faucibus ac diam in, ornare tincidunt est. Cras eu purus in ex egestas aliquam sit amet a dui. Cras luctus eros eget diam vulputate fermentum. Curabitur eu massa ut magna luctus molestie.
-                Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec rutrum lacinia rutrum. Vestibulum tincidunt odio et interdum elementum. Duis a nisl enim. Duis faucibus ante neque, quis laoreet velit tristique et. Suspendisse potenti. Etiam pretium malesuada metus et hendrerit. Pellentesque commodo risus eu ligula pretium, at accumsan dui fermentum. Pellentesque nunc diam, congue eget quam in, egestas condimentum mauris. Quisque vitae porta quam.
-                Pellentesque imperdiet condimentum felis, id tempus ipsum interdum vitae. Etiam rhoncus nulla nec metus sollicitudin bibendum et bibendum odio. In molestie elementum neque sed sagittis. Duis leo libero, convallis ac fringilla in, sollicitudin vitae leo. Aliquam et lorem justo. Pellentesque tempor est sed tincidunt venenatis. Fusce eu est tristique, efficitur sapien eu, tincidunt purus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin id magna ullamcorper, fringilla lectus sed, mollis nibh. Nullam quis consequat turpis. Cras sed vulputate turpis, eu euismod tellus. 
-            </p>
-        </div>
-        <div class="content" id="o_kawie3">
-            <h2>Przygotowanie kawy</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et nisi tortor. Nullam rutrum, eros et ullamcorper suscipit, massa erat fermentum urna, sagittis euismod sem magna ac nulla. Sed eget condimentum massa. Aliquam felis magna, sollicitudin aliquet arcu non, accumsan interdum arcu. Mauris vulputate, arcu nec semper vehicula, mauris odio semper odio, eget eleifend magna mauris a enim. Praesent sodales odio non mollis sollicitudin. Proin eu consectetur ante, finibus tempus magna. Aliquam purus magna, mattis id faucibus ut, rutrum et justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Pellentesque neque neque, volutpat in ante ultricies, tincidunt congue dolor. Donec ultricies, elit nec vestibulum cursus, justo nibh commodo sem, at hendrerit quam neque facilisis metus. Curabitur porta non tellus in tincidunt. Aliquam et lacus convallis, interdum risus eu, bibendum nisi. Nulla condimentum dignissim augue vel tempus. In placerat ante sem, a dapibus tellus iaculis eget. Nulla mollis arcu a nisi cursus semper. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus eu purus a odio consequat eleifend. Nunc sed sodales nunc. Donec lectus enim, mattis sit amet suscipit a, luctus non felis. Integer finibus magna vitae erat consectetur ullamcorper. Duis vel auctor sapien, non tristique nibh. Vestibulum tortor mi, suscipit id mollis et, luctus non elit.
-                Vivamus sollicitudin elementum neque, ultricies lobortis odio pretium sit amet. Vivamus rutrum justo fermentum nulla posuere, non dignissim dui sollicitudin. Sed ipsum nisi, facilisis eu egestas eget, pellentesque et tortor. Fusce sed facilisis sem, eu commodo eros. Ut finibus, libero non porta consectetur, ex mauris sodales dui, in eleifend quam tellus et mauris. Donec in mollis mi. Donec rhoncus sit amet nisi non ullamcorper. Proin nulla ex, faucibus ac diam in, ornare tincidunt est. Cras eu purus in ex egestas aliquam sit amet a dui. Cras luctus eros eget diam vulputate fermentum. Curabitur eu massa ut magna luctus molestie.
-                Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec rutrum lacinia rutrum. Vestibulum tincidunt odio et interdum elementum. Duis a nisl enim. Duis faucibus ante neque, quis laoreet velit tristique et. Suspendisse potenti. Etiam pretium malesuada metus et hendrerit. Pellentesque commodo risus eu ligula pretium, at accumsan dui fermentum. Pellentesque nunc diam, congue eget quam in, egestas condimentum mauris. Quisque vitae porta quam.
-                Pellentesque imperdiet condimentum felis, id tempus ipsum interdum vitae. Etiam rhoncus nulla nec metus sollicitudin bibendum et bibendum odio. In molestie elementum neque sed sagittis. Duis leo libero, convallis ac fringilla in, sollicitudin vitae leo. Aliquam et lorem justo. Pellentesque tempor est sed tincidunt venenatis. Fusce eu est tristique, efficitur sapien eu, tincidunt purus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin id magna ullamcorper, fringilla lectus sed, mollis nibh. Nullam quis consequat turpis. Cras sed vulputate turpis, eu euismod tellus. 
-            </p>
-        </div>
-        <div class="content" id="o_kawie4">
-            <h2>O kawie 4</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et nisi tortor. Nullam rutrum, eros et ullamcorper suscipit, massa erat fermentum urna, sagittis euismod sem magna ac nulla. Sed eget condimentum massa. Aliquam felis magna, sollicitudin aliquet arcu non, accumsan interdum arcu. Mauris vulputate, arcu nec semper vehicula, mauris odio semper odio, eget eleifend magna mauris a enim. Praesent sodales odio non mollis sollicitudin. Proin eu consectetur ante, finibus tempus magna. Aliquam purus magna, mattis id faucibus ut, rutrum et justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Pellentesque neque neque, volutpat in ante ultricies, tincidunt congue dolor. Donec ultricies, elit nec vestibulum cursus, justo nibh commodo sem, at hendrerit quam neque facilisis metus. Curabitur porta non tellus in tincidunt. Aliquam et lacus convallis, interdum risus eu, bibendum nisi. Nulla condimentum dignissim augue vel tempus. In placerat ante sem, a dapibus tellus iaculis eget. Nulla mollis arcu a nisi cursus semper. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus eu purus a odio consequat eleifend. Nunc sed sodales nunc. Donec lectus enim, mattis sit amet suscipit a, luctus non felis. Integer finibus magna vitae erat consectetur ullamcorper. Duis vel auctor sapien, non tristique nibh. Vestibulum tortor mi, suscipit id mollis et, luctus non elit.
-                Vivamus sollicitudin elementum neque, ultricies lobortis odio pretium sit amet. Vivamus rutrum justo fermentum nulla posuere, non dignissim dui sollicitudin. Sed ipsum nisi, facilisis eu egestas eget, pellentesque et tortor. Fusce sed facilisis sem, eu commodo eros. Ut finibus, libero non porta consectetur, ex mauris sodales dui, in eleifend quam tellus et mauris. Donec in mollis mi. Donec rhoncus sit amet nisi non ullamcorper. Proin nulla ex, faucibus ac diam in, ornare tincidunt est. Cras eu purus in ex egestas aliquam sit amet a dui. Cras luctus eros eget diam vulputate fermentum. Curabitur eu massa ut magna luctus molestie.
-                Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec rutrum lacinia rutrum. Vestibulum tincidunt odio et interdum elementum. Duis a nisl enim. Duis faucibus ante neque, quis laoreet velit tristique et. Suspendisse potenti. Etiam pretium malesuada metus et hendrerit. Pellentesque commodo risus eu ligula pretium, at accumsan dui fermentum. Pellentesque nunc diam, congue eget quam in, egestas condimentum mauris. Quisque vitae porta quam.
-                Pellentesque imperdiet condimentum felis, id tempus ipsum interdum vitae. Etiam rhoncus nulla nec metus sollicitudin bibendum et bibendum odio. In molestie elementum neque sed sagittis. Duis leo libero, convallis ac fringilla in, sollicitudin vitae leo. Aliquam et lorem justo. Pellentesque tempor est sed tincidunt venenatis. Fusce eu est tristique, efficitur sapien eu, tincidunt purus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin id magna ullamcorper, fringilla lectus sed, mollis nibh. Nullam quis consequat turpis. Cras sed vulputate turpis, eu euismod tellus. 
-            </p>
-        </div>
+
+<body>
+	<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+
+  <button id="navbar-button" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+				<a class="nav-link" href="#about">About me</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#featured">Featured list</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#media">Media list</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#contact">Contact me</a>
+			</li>
+    </ul>
+  </div>
+</nav>
+
+
+	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+		<ol class="carousel-indicators">
+			<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+			<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+			<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+		</ol>
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<div class="slide-1"></div>
+			</div>
+			<div class="carousel-item">
+				<div class="slide-2"></div>
+			</div>
+			<div class="carousel-item">
+				<div class="slide-3"></div>
+			</div>
+		</div>
+		<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		</a>
+		<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		</a>
+	</div>
+
+	<section id="about">
+		<h1>About me</h1>
+    	<hr class="divider"/>
+
+    	<div class="container">
+			<div class="row">
+    			<div class="col-sm-4">
+    				<img src="img/about.jpg" class="w-100" alt="...">
+    			</div>
+    			<div class="col-sm-8 text-justify">
+    				Jestem Marcin.</br>Kocham pjeski.</br></br>
+    				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+    			</div>
+  			</div>
+		</div>
+	</section>
+
+	<section id="featured">
+   		<h1>Featured list</h1>
+    	<hr class="divider"/>
+
+    	<div class="container">
+        	<div class="row">
+            	<div class="col-sm-6 my-4">
+                	<div class="card">
+                    	<img src="https://www.gdos.gov.pl/files/aktualnosci/64283/030K_01_1_news_image_big_gallery.jpg" class="card-img-top" alt="...">
+                    	<div class="card-body">
+                        	<h5 class="card-title">Special title treatment</h5>
+                        	<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    	</div>
+                	</div>
+            	</div>
+            	<div class="col-sm-6 my-4">
+                	<div class="card">
+                    	<img src="https://traveladvisor.pl/wp-content/uploads/2018/04/krajobraz-islandia-wprowadza-ograniczenia-dla-turyst%C3%B3w.jpg" class="card-img-top" alt="...">
+                    	<div class="card-body">
+                        	<h5 class="card-title">Special title treatment</h5>
+                        	<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    	</div>
+                	</div>
+            	</div>
+        	</div>
+
+        	<div class="row">
+            	<div class="col-sm-6 my-4">
+                	<div class="card">
+                    	<img src="https://www.tapeciarnia.pl/tapety/normalne/255700_pole_maki_farmy_wiatraki_chmury_wioska_krajobraz.jpg" class="card-img-top" alt="...">
+                    	<div class="card-body">
+                        	<h5 class="card-title">Special title treatment</h5>
+                        	<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    	</div>
+                	</div>
+            	</div>
+            	<div class="col-sm-6 my-4">
+                	<div class="card">
+                    	<img src="http://katowice.rdos.gov.pl/files/aktualnosci/64512/krajobraz_1_news_image_big_gallery.jpg" class="card-img-top" alt="...">
+                    	<div class="card-body">
+                        	<h5 class="card-title">Special title treatment</h5>
+                        	<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    	</div>
+                	</div>
+            	</div>
+        	</div>
+    	</div>
+	</section>
+
+	<section id="media">
+    	<h1>Media list</h1>
+    	<hr class="divider"/>
+
+    	<div class="container">
+
+			<ul class="list-unstyled">
+  				<li class="media">
+    				<img src="img/dog-1.jpg" class="mr-3" alt="...">
+    				<div class="media-body">
+      					<h5 class="mt-0 mb-1">List-based media object</h5>
+      					Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+   					</div>
+  				</li>
+  				<li class="media my-4">
+    				<img src="img/dog-2.jpg" class="mr-3" alt="...">
+    				<div class="media-body">
+      					<h5 class="mt-0 mb-1">List-based media object</h5>
+      					Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+    				</div>
+  				</li>
+  				<li class="media">
+    				<img src="img/dog-3.jpg" class="mr-3" alt="...">
+    				<div class="media-body">
+      					<h5 class="mt-0 mb-1">List-based media object</h5>
+      					Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+    				</div>
+  				</li>
+  				<li class="media my-4">
+    				<img src="img/dog-4.jpg" class="mr-3" alt="...">
+    				<div class="media-body">
+      					<h5 class="mt-0 mb-1">List-based media object</h5>
+      					Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+    				</div>
+  				</li>
+			</ul>
+      
+    	</div>
+	</section>
+
+	<section id="contact">
+    <h1>Contact me</h1>
+    <hr class="divider"/>
+
+    <div class="container">
+
+       	<div class="card">
+  			<div class="card-body">
+    			<div class="map-container" style="height: 200px">
+                    <iframe src="https://maps.google.com/maps?q=Miami&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+                            style="border:0" allowfullscreen></iframe>
+           		</div>
+
+				<form class="mt-4">
+					<div class="form-row">
+						<div class="form-group col-md-6">
+							<input type="text" class="form-control" placeholder="Name">
+						</div>
+						<div class="form-group col-md-6">
+							<input type="text" class="form-control" placeholder="Email address">
+						</div>
+					</div>
+					<div class="form-group">
+    					<input type="text" class="form-control" placeholder="Subject">
+  					</div>
+ 					<div class="form-group">
+    					<textarea class="form-control" rows="3" placeholder="Text"></textarea>
+  					</div>
+  					<button type="submit" class="btn btn-primary w-100">Send</button>
+				</form>
+
+			</div>
+		</div>
+
     </div>
+</section>
+
+<footer>Tu se wpiszesz coś śmieszku, hehe</footer>
+
+
 </body>
 </html>
