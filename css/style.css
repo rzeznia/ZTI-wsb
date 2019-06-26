@@ -43,6 +43,13 @@ body {
 	.navbar-expand-lg .navbar-nav {
     	margin: auto;
     }
+
+    .nav-pills .nav-link.active{
+        color: #f6e8d6;
+        background-color: inherit;
+        font-weight: bold;
+        border-bottom: solid 2px;
+    }
 }
 
 /* SLIDER */
@@ -133,5 +140,9 @@ footer {
     footer {
         text-align: left;
         padding: 5px 0 5px 10px;
+    }
+    .nav-pills .nav-link.active{
+        background-color: inherit;
+        border-bottom: solid 2px;
     }
 }

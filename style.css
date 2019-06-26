@@ -47,8 +47,9 @@ nav a{
 }
 .nav-pills .nav-link.active{
     color: #f6e8d6;
-    background-color: inherit;
+    background-color: #f6e8d6 !important;
     font-weight: bold;
+    border-bottom: solid 1px;
 }
 li{
     list-style: none;
